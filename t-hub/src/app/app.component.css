@@ -1,0 +1,11 @@
+/* Custom styling to ensure clarity */
+button {
+    /* Ensure text remains readable */
+    background: rgba(255, 255, 255, 0.2); /* Optional: adds a slight white tint to improve text readability */
+  }
+  
+  /* Hover effect */
+  button:hover {
+    border-color: rgba(255, 255, 255, 0.5); /* Adds a subtle border on hover */
+  }
+  

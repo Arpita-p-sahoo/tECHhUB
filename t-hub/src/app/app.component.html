@@ -1,4 +1,64 @@
-<h1 class="text-3xl font-bold underline">
-  Hello world!
-</h1>
-<router-outlet></router-outlet>
+<div class="flex h-screen">
+  <!-- Side Navigation -->
+  <div class="w-64 bg-gray-800 text-white hidden sm:block p">
+    <app-side-nav></app-side-nav>
+  </div>
+
+  <!-- Main Content -->
+  <div class="flex-1 flex flex-col">
+    <!-- Navigation Bar -->
+    <nav class="flex justify-between items-center bg-gray-800 p-4">
+      <!-- Left Section (Logo or anything else) -->
+      <div class="flex items-center space-x-4">
+        <!-- Placeholder for logo or additional content -->
+        <h1 class="text-white text-xl"></h1>
+      </div>
+    
+      <!-- Right Section (Post a Question and User actions) -->
+      <div class="flex items-center space-x-4">
+        <!-- Post a Question Button -->
+        <button class="bg-transparent text-white py-2 px-4 rounded-full backdrop-blur-md border border-transparent hover:border-gray-300" routerLink="/form">
+          Post a question
+        </button>
+        
+    
+        <!-- User Profile with Dropdown -->
+        <div class="relative">
+          <button class="flex items-center focus:outline-none" (click)="toggleDropdown()">
+            <img
+              src="https://img.freepik.com/premium-vector/man-professional-business-casual-young-avatar-icon-illustration_1277826-623.jpg?uid=R112919801&ga=GA1.1.358099460.1716009506&semt=ais_hybrid"
+              alt="User"
+              class="w-8 h-8 rounded-full border border-gray-300"
+            />
+          </button>
+    
+          <!-- User Dropdown (shown on click) -->
+          <div
+            *ngIf="dropdownOpen"
+            class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg overflow-hidden z-10"
+          >
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Profile</a>
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Settings</a>
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Logout</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+
+    <!-- Router Outlet -->
+    <div class="flex-1 overflow-y-auto p-6">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+<!-- Mobile Navigation -->
+<!-- <div class="sm:hidden">
+  <div class="w-full bg-gray-800 text-white p-4">
+    <button (click)="toggleMobileMenu()" class="text-white">Menu</button>
+  </div>
+  <div [ngClass]="{'hidden': !isMobileMenuOpen}" class="bg-gray-800 text-white p-4">
+    <app-side-nav></app-side-nav>
+  </div>
+</div> -->

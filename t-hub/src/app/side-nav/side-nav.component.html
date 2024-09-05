@@ -1,1 +1,49 @@
-<p>side-nav works!</p>
+<nav class="flex flex-col p-4 space-y-4">
+  <!-- Home Link -->
+  <a 
+    routerLink="/" 
+    routerLinkActive="bg-gray-700 text-white"
+    [routerLinkActiveOptions]="{ exact: true }"
+    class="flex items-center p-2 text-gray-300 hover:bg-gray-700 hover:text-white rounded"
+  >
+    <img src="" alt="Home" class="w-6 h-6 mr-2" />
+    <span>Home</span>
+  </a>
+
+  <!-- Frameworks List -->
+  <a 
+    routerLink="/framework" 
+    routerLinkActive="bg-gray-700 text-white"
+    class="flex items-center p-2 text-gray-300 hover:bg-gray-700 hover:text-white rounded"
+  >
+    <img src="assets/angular-icon.svg" alt="Angular" class="w-6 h-6 mr-2" />
+    <span>Angular</span>
+  </a>
+
+  <a 
+    routerLink="/react" 
+    routerLinkActive="bg-gray-700 text-white"
+    class="flex items-center p-2 text-gray-300 hover:bg-gray-700 hover:text-white rounded"
+  >
+    <img src="assets/react-icon.svg" alt="React" class="w-6 h-6 mr-2" />
+    <span>React</span>
+  </a>
+
+  <a 
+    routerLink="/vue" 
+    routerLinkActive="bg-gray-700 text-white"
+    class="flex items-center p-2 text-gray-300 hover:bg-gray-700 hover:text-white rounded"
+  >
+    <img src="assets/vue-icon.svg" alt="Vue.js" class="w-6 h-6 mr-2" />
+    <span>Vue.js</span>
+  </a>
+
+  <a 
+    routerLink="/svelte" 
+    routerLinkActive="bg-gray-700 text-white"
+    class="flex items-center p-2 text-gray-300 hover:bg-gray-700 hover:text-white rounded"
+  >
+    <img src="assets/svelte-icon.svg" alt="Svelte" class="w-6 h-6 mr-2" />
+    <span>Svelte</span>
+  </a>
+</nav>

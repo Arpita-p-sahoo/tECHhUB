@@ -1,1 +1,116 @@
-<p>form works!</p>
+<form class="p-4 space-y-4">
+    <!-- Full-width Input Box -->
+    <input
+      type="text"
+      placeholder="Question Title"
+      class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+    />
+  
+    <!-- Radio Buttons for Frameworks -->
+    <div class="space-y-2">
+      <label class="flex items-center space-x-2">
+        <input
+          type="radio"
+          name="framework"
+          value="angular"
+          class="form-radio text-blue-500"
+        />
+        <span>Angular</span>
+      </label>
+      <label class="flex items-center space-x-2">
+        <input
+          type="radio"
+          name="framework"
+          value="react"
+          class="form-radio text-blue-500"
+        />
+        <span>React</span>
+      </label>
+      <label class="flex items-center space-x-2">
+        <input
+          type="radio"
+          name="framework"
+          value="vue"
+          class="form-radio text-blue-500"
+        />
+        <span>Vue</span>
+      </label>
+      <label class="flex items-center space-x-2">
+        <input
+          type="radio"
+          name="framework"
+          value="svelte"
+          class="form-radio text-blue-500"
+        />
+        <span>Svelte</span>
+      </label>
+      <label class="flex items-center space-x-2">
+        <input
+          type="radio"
+          name="framework"
+          value="ember"
+          class="form-radio text-blue-500"
+        />
+        <span>Ember</span>
+      </label>
+    </div>
+  
+    <!-- Checkboxes for Priority -->
+    <div class="space-y-2">
+      <label class="flex items-center space-x-2">
+        <input
+          type="checkbox"
+          class="form-checkbox text-red-500"
+        />
+        <span class="text-red-500">High Priority</span>
+      </label>
+      <label class="flex items-center space-x-2">
+        <input
+          type="checkbox"
+          class="form-checkbox text-orange-500"
+        />
+        <span class="text-orange-500">Medium Priority</span>
+      </label>
+      <label class="flex items-center space-x-2">
+        <input
+          type="checkbox"
+          class="form-checkbox text-green-500"
+        />
+        <span class="text-green-500">Low Priority</span>
+      </label>
+      <label class="flex items-center space-x-2">
+        <input
+          type="checkbox"
+          class="form-checkbox text-yellow-500"
+        />
+        <span class="text-yellow-500">Optional</span>
+      </label>
+    </div>
+  
+    <!-- Text Area -->
+    <textarea
+      placeholder="Enter solution here"
+      class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+    ></textarea>
+  
+    <!-- Conditional Input Box with Link Icon -->
+    <div *ngIf="!hasSolution" class="flex items-center space-x-2">
+      <input
+        type="text"
+        placeholder="Source link"
+        class="flex-1 p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h1m2 4v-4h-1m0 8h4m-4 0h-4m-3 0a4 4 0 01-4-4v-2a4 4 0 014-4h3m4 0a4 4 0 014 4v2a4 4 0 01-4 4m0 0h-4m-4 0H6" />
+      </svg>
+    </div>
+  
+    <!-- Submit Button -->
+    <button
+      type="submit"
+      class="w-full bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-600"
+    >
+      Submit
+    </button>
+  </form>
+  
