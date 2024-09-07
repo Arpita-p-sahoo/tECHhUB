@@ -1,7 +1,7 @@
-<div class="flex items-center justify-center min-h-screen bg-gray-100">
+<div class="flex items-center justify-center min-h-screen bg-gray-100" *ngIf="false">
     <div class="w-full max-w-md bg-white p-8 rounded-lg shadow-md">
       <!-- Form Heading -->
-      <h2 class="text-3xl font-bold text-center text-gray-700 mb-6">Log in</h2>
+      <h2 class="text-3xl font-bold text-center text-gray-700 mb-6">Log in to techHub</h2>
       
       <!-- Login Form -->
       <form>
@@ -33,7 +33,7 @@
         <div>
           <button 
             type="submit" 
-            class="w-full bg-blue-500 text-white py-3 px-4 rounded-lg font-medium hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition ease-in-out duration-150"
+            class="w-full bg-gray-800 text-white py-3 px-4 rounded-lg font-medium hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition ease-in-out duration-150"
           (click)="Login()">
             Log in
           </button>
@@ -49,6 +49,85 @@
           Don't have an account? 
           <a href="#" class="text-blue-500 hover:underline">Sign up</a>
         </p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- SIGN UP -->
+
+  <div class="flex items-center justify-center min-h-screen bg-gray-100" *ngIf="true">
+    <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full space-y-6">
+      <h2 class="text-3xl font-bold text-center text-gray-900">Sign Up to techub</h2>
+  
+      <form class="space-y-6">
+        <!-- Full Name Input -->
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+          <input 
+            id="name" 
+            name="name" 
+            type="text" 
+            required 
+            class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            placeholder="Your Full Name"
+          >
+        </div>
+  
+        <!-- Email Input -->
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
+          <input 
+            id="email" 
+            name="email" 
+            type="email" 
+            required 
+            class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            placeholder="you@example.com"
+          >
+        </div>
+  
+        <!-- Password Input -->
+        <div>
+          <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+          <input 
+            id="password" 
+            name="password" 
+            type="password" 
+            required 
+            class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            placeholder="Your Password"
+          >
+        </div>
+  
+        <!-- Confirm Password Input -->
+        <div>
+          <label for="confirm-password" class="block text-sm font-medium text-gray-700">Confirm Password</label>
+          <input 
+            id="confirm-password" 
+            name="confirm-password" 
+            type="password" 
+            required 
+            class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            placeholder="Confirm Password"
+          >
+        </div>
+  
+        <!-- Sign Up Button -->
+        <div>
+          <button 
+            type="submit" 
+            class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          >
+            Sign Up 
+          </button>
+        </div>
+      </form>
+  
+      <!-- Already have an account? -->
+      <div class="text-sm text-center">
+        <a routerLink="/login" class="font-medium text-indigo-600 hover:text-indigo-500">
+          Already have an account? Log In
+        </a>
       </div>
     </div>
   </div>
