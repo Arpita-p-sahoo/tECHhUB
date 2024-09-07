@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MainService } from './main.service';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,8 @@ export class AppComponent {
   dropdownOpen = false;
   isMobileMenuOpen = false;
 
+  constructor(public mainSvc:MainService){}
+
   toggleDropdown() {
     this.dropdownOpen = !this.dropdownOpen;
   }
@@ -17,4 +20,6 @@ export class AppComponent {
   toggleMobileMenu() {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
   }
+
+
 }

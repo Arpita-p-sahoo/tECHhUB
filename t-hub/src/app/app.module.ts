@@ -7,6 +7,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { FrameworksComponent } from './frameworks/frameworks.component';
 import { FormComponent } from './form/form.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FormComponent } from './form/form.component';
     WelcomeComponent,
     SideNavComponent,
     FrameworksComponent,
-    FormComponent
+    FormComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
