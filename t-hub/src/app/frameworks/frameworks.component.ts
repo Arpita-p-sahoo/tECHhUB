@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MainService } from '../main.service';
 
 @Component({
   selector: 'app-frameworks',
@@ -6,7 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./frameworks.component.css']
 })
 export class FrameworksComponent {
-
+  constructor(public mainSvc:MainService){ 
+    
+  }
   questions = [
     {
       title: 'What is Angular?',

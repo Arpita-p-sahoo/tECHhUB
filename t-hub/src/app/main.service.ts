@@ -9,4 +9,8 @@ export class MainService {
   
  isUserLoggedIn:boolean = false
 
+  QuestionDetails :any;
+
+  public questions:any = [];
+
 }

@@ -1,6 +1,6 @@
-<form class="p-4 space-y-4">
+<form class="p-4 space-y-4" [formGroup]="QuestionForm" (ngSubmit)="onSubmit()">
     <!-- Full-width Input Box -->
-    <input
+    <input formControlName="question"
       type="text"
       placeholder="Question Title"
       class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -9,7 +9,7 @@
     <!-- Radio Buttons for Frameworks -->
     <div class="space-y-2">
       <label class="flex items-center space-x-2">
-        <input
+        <input formControlName="framework"
           type="radio"
           name="framework"
           value="angular"
@@ -18,7 +18,7 @@
         <span>Angular</span>
       </label>
       <label class="flex items-center space-x-2">
-        <input
+        <input formControlName="framework"
           type="radio"
           name="framework"
           value="react"
@@ -27,7 +27,7 @@
         <span>React</span>
       </label>
       <label class="flex items-center space-x-2">
-        <input
+        <input formControlName="framework"
           type="radio"
           name="framework"
           value="vue"
@@ -36,7 +36,7 @@
         <span>Vue</span>
       </label>
       <label class="flex items-center space-x-2">
-        <input
+        <input formControlName="framework"
           type="radio"
           name="framework"
           value="svelte"
@@ -45,7 +45,7 @@
         <span>Svelte</span>
       </label>
       <label class="flex items-center space-x-2">
-        <input
+        <input formControlName="framework"
           type="radio"
           name="framework"
           value="ember"
@@ -58,28 +58,28 @@
     <!-- Checkboxes for Priority -->
     <div class="space-y-2">
       <label class="flex items-center space-x-2">
-        <input
+        <input formControlName="priority"
           type="checkbox"
           class="form-checkbox text-red-500"
         />
         <span class="text-red-500">High Priority</span>
       </label>
       <label class="flex items-center space-x-2">
-        <input
+        <input formControlName="priority"
           type="checkbox"
           class="form-checkbox text-orange-500"
         />
         <span class="text-orange-500">Medium Priority</span>
       </label>
       <label class="flex items-center space-x-2">
-        <input
+        <input formControlName="priority"
           type="checkbox"
           class="form-checkbox text-green-500"
         />
         <span class="text-green-500">Low Priority</span>
       </label>
       <label class="flex items-center space-x-2">
-        <input
+        <input formControlName="priority" ngValue="optional"
           type="checkbox"
           class="form-checkbox text-yellow-500"
         />
@@ -88,7 +88,7 @@
     </div>
   
     <!-- Text Area -->
-    <textarea
+    <textarea formControlName="solution"
       placeholder="Enter solution here"
       class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
     ></textarea>
@@ -114,4 +114,5 @@
       Submit
     </button>
   </form>
+  <p>{{res | json}}</p>
   
